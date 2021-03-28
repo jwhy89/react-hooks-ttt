@@ -8,7 +8,7 @@ const style = {
   height: '250px',
   margin: '0 auto',
   display: 'grid',
-  gridTemplate: 'repeat(3, 1fr) / repeat(3, 1fr)'
+  gridTemplate: 'repeat(3, 1fr) / repeat(3, 1fr)',
 };
 
 const Board = ({ squares, onClick }) => (

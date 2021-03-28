@@ -6,7 +6,7 @@ const styles = {
   fontSize: '30px',
   fontWeight: '800',
   cursor: 'pointer',
-  outline: 'none'
+  outline: 'none',
 };
 
 const Square = ({ value, onClick }) => (

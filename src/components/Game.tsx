@@ -6,7 +6,7 @@ import Board from './Board';
 
 const styles = {
   width: '200px',
-  margin: '20px auto'
+  margin: '20px auto',
 };
 
 const Game = () => {
@@ -14,8 +14,8 @@ const Game = () => {
   const [stepNumber, setStepNumber] = useState(0);
   const [xIsNext, setXisNext] = useState(true);
   const winner = calculateWinner(history[stepNumber]);
- 
-  const handleClick = i => {
+
+  const handleClick = (i) => {
     const timeInHistory = history.slice(0, stepNumber + 1);
     const current = timeInHistory[stepNumber];
     const squares = [...current];
@@ -28,7 +28,7 @@ const Game = () => {
     setXisNext(!xIsNext);
   };
 
-  const jumpTo = step => {
+  const jumpTo = (step) => {
     setStepNumber(step);
     setXisNext(step % 2 === 0);
   };
@@ -47,7 +47,7 @@ const Game = () => {
     <>
       <Board squares={history[stepNumber]} onClick={handleClick} />
       <div style={styles}>
-        {winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}
+        {winner ? `Winner: ${winner}` : `Next Player: ${xIsNext ? 'X' : 'O'}`}
         {renderMoves()}
       </div>
     </>
