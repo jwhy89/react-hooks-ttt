@@ -15,7 +15,7 @@ const Game = () => {
   const [xIsNext, setXisNext] = useState(true);
   const winner = calculateWinner(history[stepNumber]);
 
-  const handleClick = (i) => {
+  const handleClick = (i: number) => {
     const timeInHistory = history.slice(0, stepNumber + 1);
     const current = timeInHistory[stepNumber];
     const squares = [...current];
@@ -38,7 +38,7 @@ const Game = () => {
       const destination = move ? `Got to move #${move}` : 'Go to start';
       return (
         <li key={move}>
-          <button onClick={() => jumpTo(move)}>{destination}</button>
+          <button type='button' onClick={() => jumpTo(move)}>{destination}</button>
         </li>
       );
     });

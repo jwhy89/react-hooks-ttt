@@ -9,6 +9,7 @@ const style = {
   margin: '0 auto',
   display: 'grid',
   gridTemplate: 'repeat(3, 1fr) / repeat(3, 1fr)',
+  marginTop: '50px',
 };
 
 const Board = ({ squares, onClick }) => (
