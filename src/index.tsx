@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import packageJson from '../package.json';
+
+// eslint-disable-next-line no-console
+console.log(packageJson.version);
 
 ReactDOM.render(
   <React.StrictMode>
